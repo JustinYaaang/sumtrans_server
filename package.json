@@ -1,0 +1,19 @@
+{
+  "name": "server_summarize_translate",
+  "version": "1.0.0",
+  "description": "export FLASK_APP=hello.py flask run",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JustinYaaang/sumtrans_server.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JustinYaaang/sumtrans_server/issues"
+  },
+  "homepage": "https://github.com/JustinYaaang/sumtrans_server#readme"
+}
