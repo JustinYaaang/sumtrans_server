@@ -18,7 +18,7 @@ var server = http.createServer(function(request, response){
     'Content-Type': 'text/plain',
     'Access-Control-Allow-Origin' : '*',
     'Access-Control-Allow-Headers': 'Accept',
-    'Access-Control-Allow-Headers': 'Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With',
+    // 'Access-Control-Allow-Headers': 'Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With',
 
     // "Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept",
     'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE'
@@ -29,7 +29,7 @@ var server = http.createServer(function(request, response){
     response.writeHead(200, {
     'Content-Type': 'text/plain',
     'Access-Control-Allow-Origin' : '*',
-    'Access-Control-Allow-Headers': 'Content-Type, Accept',
+    'Access-Control-Allow-Headers': 'Content-Type, Access-Control-Allow-Headers, Accept',
     'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE'
     });
     response.write('submit')
