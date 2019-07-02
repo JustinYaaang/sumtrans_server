@@ -38,7 +38,8 @@ var server = http.createServer(function(request, response){
     response.write('submit')
     request.on('data', function (data) {
       console.log(data);
-      tools.convert_data_to_pdf(data);
+      console.log(typeof data);
+      tools.convert_data_to_pdf(data, "temp.pdf");
       
     });
     response.end()

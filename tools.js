@@ -1,6 +1,7 @@
 var convertapi = require('convertapi')('DaTFjz8KEp47G5pB');
 var unirest = require('unirest');
 const PDFDocument = require('pdfkit');
+var fs = require("fs");
 
 API_KEY = "ef481a34d9msh49b3c6964d8af2ep1f3bd8jsnd5a7eb6d7347"
 API_HOST = "meaningcloud-summarization-v1.p.rapidapi.com"
@@ -12,7 +13,7 @@ target_url = "http%3A%2F%2Fen.wikipedia.org%2Fwiki%2FStar_Trek"
 
 module.exports = 
 {
-  convert_pdf: function (file){
+  convert_pdf_to_txt: function (file){
     convertapi.convert('txt', {
         File: file
     }, 'pdf').then(function(result) {
@@ -23,11 +24,16 @@ module.exports =
 
 
   
-  convert_data_to_pdf: function(data){
-    const doc = new PDFDocument()
-    let filename = data
-    // Stripping special characters
-    filename = encodeURIComponent(filename) + '.pdf'
+  convert_data_to_pdf: function(data, filename){
+    // generate pdf
+    fs.appendFile(filename, data, (err) => {
+      if (!err){
+        console.log("Successfully Written to File.");
+      }
+      else {
+        console.log(err);
+      }
+    });
   }
 
 };
